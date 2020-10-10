@@ -1,0 +1,33 @@
+Directori Presentation:
+
+Hi trobem les classes que pertanyen a la capa presentacio.
+
+- FormPanel.java:
+    Conte la classe del panel lateral de la interficie on hi trobem les propietats compressores.
+
+- Help.java:
+    Classe on trobem el manual.
+
+- MainFrame.java:
+    Conte la classe del main principal.
+
+- NavigationClickObserver.java:
+    Conte la classe NavigationClickObserver.
+
+- NavigationPanel.java:
+    Conte la classe del panel de navegacio.
+
+- PresentationController.java:
+    Conte la classe del controlador de la presentacio.
+
+- ShowImage.java:
+    Conte la classe que mostrara la imatge seleccionada.
+
+- ShowTest.java:
+    Conte la classe que mostrara textos.
+
+- Toolbar.java:
+    Conte la classe Toolbar.
+
+- TotalStatistics.java:
+    Conte la classe que calcula les estadistiques total.

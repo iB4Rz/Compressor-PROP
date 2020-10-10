@@ -1,0 +1,13 @@
+Directori FONTS:
+
+Conte subdirectoris amb el codi font programat en 3 capes.
+
+\Domain:
+    Conte el codi font de la capa domini.
+\Persistence:
+    Conte el codi font de la capa persistencia.
+\Presentation:
+    Conte el codi font de la capa presentacio.
+
+- MainDriver.java:
+    Main driver per l'execució del programa.

@@ -1,0 +1,145 @@
+apply plugin: 'application'
+apply plugin: 'java'
+apply plugin: 'java-library'
+apply plugin: 'eclipse'
+
+// Disable default test task
+project.gradle.startParameter.excludedTaskNames.add('test')
+project.gradle.startParameter.excludedTaskNames.add('run')
+
+// Set java compatibility version
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+// Specify source paths
+sourceSets{
+    main{
+        java {
+            srcDirs=['FONTS']
+            exclude 'Testing'
+        }
+    }
+    test{
+        java{
+            srcDirs=['FONTS/Testing']
+        }
+    }
+}
+
+// Main driver class (default gradle build task)
+ext {
+   javaMainClass = "MainDriver"
+}
+
+application {
+    mainClassName = javaMainClass
+}
+
+// Generates and places jar files and documentation
+task PackProject(type: GradleBuild) {
+     tasks = ['clean', 'fatMainJar', 'fatUnitTestJar', 'fatExtraTestsJar', 'javadoc']
+}
+
+// Generates and places Compressor-PROP.jar
+task fatMainJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': javaMainClass
+    }
+    baseName = 'Compressor-PROP'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+    doLast {
+        copy {
+            from fileTree('build/libs/Compressor-PROP.jar')
+            into 'EXE/MainDriver'
+        }
+    }
+}
+
+// Generate and run Compressor-PROP.jar
+task Main(type: JavaExec) {
+  dependsOn fatMainJar
+  classpath = files("build/libs/Compressor-PROP.jar")
+}
+
+// Generates and places UnitTest_JPEG.jar
+task fatUnitTestJar(type: Jar) {
+    includeEmptyDirs = false
+    manifest {
+        attributes 'Main-Class': "UnitTestJPEGDriver"
+    }
+    baseName = "UnitTestJPEG"
+
+    from { configurations.testRuntime.collect { it.isDirectory() ? it : zipTree(it) } }
+    from sourceSets.test.output
+    with jar
+    doLast {
+        copy {
+            from fileTree('build/libs/UnitTestJPEG.jar')
+            into 'EXE/UnitTestJPEG'
+        }
+    }
+}
+
+// Generate and run UnitTest_JPEG.jar
+task UnitTest(type: JavaExec) {
+  dependsOn fatUnitTestJar
+  classpath = files("build/libs/UnitTestJPEG.jar")
+}
+
+// Generates and places ExtraTests.jar
+task fatExtraTestsJar(type: Jar) {
+    includeEmptyDirs = false
+    manifest {
+        attributes 'Main-Class': "ExtraTestsDriver"
+    }
+    baseName = "ExtraTestsDriver"
+
+    from { configurations.testRuntime.collect { it.isDirectory() ? it : zipTree(it) } }
+    from sourceSets.test.output
+    with jar
+    doLast {
+        copy {
+            from fileTree('build/libs/ExtraTestsDriver.jar')
+            into 'EXE/ExtraTests'
+        }
+    }
+}
+
+// Generate and run ExtraTests.jar
+task ExtraTests(type: JavaExec) {
+  dependsOn fatExtraTestsJar
+  classpath = files("build/libs/ExtraTestsDriver.jar")
+}
+
+// Generate and place documentation
+javadoc {
+    dependsOn clean
+    source = sourceSets.main.allJava
+    options.memberLevel = JavadocMemberLevel.PRIVATE
+    doLast {
+        def folder = new File('DOCS/Documentation')
+        if (!folder.exists()) {
+            delete 'DOCS/Documentation'
+        }
+        project.file('DOCS/Documentation').mkdirs()
+        copy {
+            from fileTree('build/docs/javadoc')
+            into 'DOCS/Documentation'
+        }
+    }
+}
+
+// Dependencies and repos
+dependencies {
+  testCompile 'junit:junit:4.12'
+}
+
+repositories {
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+    mavenCentral()
+}

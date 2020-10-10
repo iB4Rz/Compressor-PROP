@@ -1,0 +1,42 @@
+Directori Domain:
+
+Hi trobem les classes que pertanyen a la capa domini.
+
+- Algorithm.java:
+    Classe abstracte del algoritmes.
+
+- BitInputStream.java:
+    Conte la classe BitInputStream.
+
+- BitOutputStream.java:
+    Conte la classe BitOutputStream.
+
+- ByteArray.java:
+    Conte la classe ByteArray.
+
+- Color.java:
+    Conte la classe Color.
+
+- Dictionary.java:
+    Conte la classe Dictionary.
+
+- DominiController.java:
+    Conte la classe del controlador del domini.
+
+- Huffman.java:
+    Codi de l'algoritme Huffman per complementar la compressio JPEG.
+
+- JPEG.java: 
+    Codi de l'algoritme JPEG.
+
+- LZ78.java:
+    Codi de l'algoritme LZ78.
+
+- LZSS.java:
+    Codi de l'algoritme LZSS.
+
+- LZW.java:
+    Codi de l'algoritme LZW.
+
+- PPMTranslator.java:
+    Conte la classe PPMTranslator.

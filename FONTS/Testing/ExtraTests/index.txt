@@ -1,0 +1,18 @@
+Directori ExtraTest:
+
+Hi trobem tests exhaustius dels algoritmes LZs, Huffman i de les classes orientades a controlar els fluxos d'entrada i sortida de bits. 
+
+- HuffmanTest.java:
+    Test per la classe Huffman.
+
+- IOTest.java:
+    Test per les classes BitInputStream i BitOutputStream.
+
+- LZ78Test.java:
+    Test per la classe LZ78.
+
+- LZSSTest.java:
+    Test per la classe LZSS.
+
+- LZWTest.java:
+    Test per la classe LZW.

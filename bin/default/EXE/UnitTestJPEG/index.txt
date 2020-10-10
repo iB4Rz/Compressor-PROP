@@ -1,0 +1,4 @@
+Directori UnitTestJPEG
+
+- UnitTestJPEG.jar
+	Executable del test unitari del JPEG.

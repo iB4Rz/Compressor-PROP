@@ -1,0 +1,27 @@
+Directori Persistence:
+
+Hi trobem les classes que pertanyen a la capa persistencia.
+
+- Archive.java:
+    Conte la classe Archive (es volia posar de nom File).
+
+- Folder.java:
+    Conte la classe Folder.
+
+- HeaderTranslator.java:
+    Conte la classe HeaderTranslator.
+
+- InputStreamWatcher.java:
+    Conte la classe InputStreamWatcher.
+
+- JPEG_Quality.java:
+    Conte la classe JPEG_Quality.
+
+- OutputStreamWatcher.java:
+    Conte la classe OutputStreamWatcher.
+
+- PersistenceController.java:
+    Conte la classe del controlador de la persistencia.
+
+- Statics.java:
+    Classe de les estadistiques.

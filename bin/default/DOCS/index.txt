@@ -1,0 +1,27 @@
+Directori DOCS:
+
+Hi trobem la documentacio del projecte.
+
+- EnunciatProjecte.pdf: 
+    Enunciat del projecte de PROP, quadrimestre de tardor, curs 2019/20.
+
+- Normativa.pdf:
+    Conte les normes del lliurament de Projectes de Programacio.
+
+- RubricaEntrega.pdf:
+    Conte els criteris d'avaluacio de les dues entregues del projecte.
+
+- EntregaFinal.pdf:
+    Conte tota la documentacio del projecte: casos d'us, diagrames, estructura de dades ...
+
+- Diagrama_Domain.png
+    Imatge del diagrama
+
+- Diagrama_Persistence.png
+    Imatge del diagrama
+
+- Diagrama_Presentation.png
+    Imatge del diagrama
+
+\Documentation:
+    Documentacio complert amb javadoc.

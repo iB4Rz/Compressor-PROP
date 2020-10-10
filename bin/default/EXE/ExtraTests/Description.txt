@@ -1,0 +1,7 @@
+This executable exists due to the rule "Tests que el grup ha fet servir per provar el seu projecte" in Normativa.pdf
+We dont use any kind of file related tests since the completion of the first algorithm, instead we created a set of tests
+that replace this files and operates in memory instead of disk with randomided files of different sizes.
+
+ExtraTestsDriver.jar runs white box tests from FONTS/Testing/ExtraTests featuring LZ78,LZW,LZSS and Huffman
+These are not unit tests, they only test the public procedures in every algorithm (compress/decompress) and dont
+enforce retrocompatibility of the compressed files since this tests are meant to check the compression integrity after making changes etc.

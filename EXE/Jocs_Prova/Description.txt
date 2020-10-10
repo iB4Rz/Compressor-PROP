@@ -1,0 +1,10 @@
+En los juegos de prueba hemos incluido los siguientes archivos:
+
+-Test_01: per provar un arxiu txt de 2 MB. Compressió efectuada amb LZW. Podem veure com l'arxiu QuijoteDescomprimido (resultat de la descompressió de QuijoteComrpimido) que es troba dins d'aquesta carpeta es exactament igual que QuijoteOriginal.
+
+-Test_02: per provar la compressió d'una imatge mitjançant l'algortime JPEG. Pasa d'ocupar 1,1 MB a 0,33 MB en PeachComprimido i es pot apreciar la pèrdua de definició amb l'arxiu PeachDescomprimido.
+
+-Test_03: per provar que el nostre programa admet arxius amb lletres en un altre idioma, tant al títol com al document en si.La compressió passa de 99 B a 67 B. Es tracta d'un arxiu petit i podem veure com 柠檬和芒果草莓Original i 柠檬和芒果草莓Descomprimido són iguals.
+
+-Test_04: per provar la compressió d'una carpeta la qual contè una altra carpeta amb arxius, arxius txt i ppm. SubdirComrpimido passa a ocupar 4 MB dels 11,7 MB que pesa l'original i podem veure com es mantenen tots els arxius i carpetes i la seva jerarquia.
+

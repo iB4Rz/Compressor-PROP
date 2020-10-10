@@ -1,0 +1,11 @@
+Directori Arrel:
+
+/DOCS: 
+    Conte la documentacio del projecte.
+/FONTS: 
+    Conte el codi font del projecte utilitzant arquitectura en 3 Capes.
+/EXE: 
+    Conte els exectuables amb els seus respectius tests.
+
+- README.md: 
+    Conte la informacio del grup, noms i adreces electroniques i una petita guia del entorn.

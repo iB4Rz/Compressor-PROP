@@ -1,0 +1,13 @@
+Directori Jocs_Prova:
+
+/Test_01: 
+    Directori on es troba la prova 1.
+/Test_02: 
+    Directori on es troba la prova 2.
+/Test_03: 
+    Directori on es troba la prova 3.
+/Test_04: 
+    Directori on es troba la prova 4.
+
+- Description.txt
+    Descripcio breu dels jocs de prova

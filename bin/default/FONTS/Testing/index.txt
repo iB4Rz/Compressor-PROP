@@ -1,0 +1,19 @@
+Directori Testing:
+
+Hi trobem tests per comprovar que funcioni correctament els algoritmes de compressio, inclou el test unitari JPEG i els stubs.
+
+\ExtraTest:
+    Conte tests exhaustius dels algoritmes LZs, Huffman i de les classes orientades a controlar els fluxos d'entrada i sortida de bits. 
+
+\UnitTest_JPEG:
+    Conte l'unit test del JPEG aixi com els stubs necessaris, i el joc de proves/test del Color.java / PPMTranslator.java.
+
+
+- CustomTestListener.java:
+    Preparatius per l'unit test, utilitzan junit runner.
+
+- ExtraTestsDriver.java:
+    Main per la realització dels test driver dels algoritmes de la carpeta ExtraTest (triga minuts).
+
+- UnitTest_JPEGDriver.java:
+    Main per la realització de l'unit test del JPEG, aixi com els de Color i PPMTranslator. 

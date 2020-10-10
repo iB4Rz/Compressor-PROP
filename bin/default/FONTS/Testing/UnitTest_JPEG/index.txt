@@ -1,0 +1,18 @@
+Directori UnitTest_JPEG:
+
+Hi trobem l'unit test del JPEG aixi com els stubs, tambe el joc de proves/test del Color.java / PPMTranslator.java.
+
+- HuffmanStub.java:
+    Stub de la classe Huffman.
+
+- InputStreamStub.java:
+    Stub de la classe InputStream.
+
+- OutputStreamStub.java:
+    Stub de la classe OutputStream.
+
+- UnitTest.java:
+    Unit test de la classe JPEG.
+
+- UtilsTest.java:
+    Test de la classe Color i PPMTranslator.
